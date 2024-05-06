@@ -46,3 +46,15 @@ PHPMyAdmin
 Remember, there's no wrong choice. Just pick the one that feels good to you. And if you're not sure what "feels" good, stick with the ones I recommend (note the stars above).
 
 ---------------------------------------------------------------------------------------------------
+
+# Video 3 (Your First PHP Tag)
+
+http://localhost:8888
+
+make index file in root folder and run this command your project will run on this port.
+
+you can print a string by these ways in php.
+<?php print "hello world" ?>
+<?php echo "hello world" ?>
+
+------------------------------------------------------------------------------------------------
