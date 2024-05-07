@@ -73,10 +73,10 @@ diff between "" (double quotes) and '' (single quotes)
     echo "$greeting Everybody!"
 ?>
 
-- can't write variables and string simultaneously but you have to conacate them with .
+- can't write variables and string simultaneously but you have to write varible without quotes and conacate them with .
 <?php
     $greeting = "Hello";
-    echo '$greeting' . ' ' .  'Everybody!'
+    echo $greeting . ' ' .  'Everybody!'
 ?>
 
 ------------------------------------------------------------------------------------------------
