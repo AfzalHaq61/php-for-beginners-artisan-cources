@@ -49,6 +49,8 @@ Remember, there's no wrong choice. Just pick the one that feels good to you. And
 
 # Video 3 (Your First PHP Tag)
 
+Our first order of business is to prepare some basic HTML, boot a PHP server, and view it in the browser.
+
 http://localhost:8888
 
 make index file in root folder and run this command your project will run on this port.
@@ -56,5 +58,25 @@ make index file in root folder and run this command your project will run on thi
 you can print a string by these ways in php.
 <?php print "hello world" ?>
 <?php echo "hello world" ?>
+
+------------------------------------------------------------------------------------------------
+
+# Video 4 (Variables)
+
+Okay, let's move on and review basic concatenation and variables. The first time I learned about variables, my first thought was, "But why?". Let's talk about it!
+
+diff between "" (double quotes) and '' (single quotes)
+
+- write variables and string simultaneously.
+<?php
+    $greeting = "Hello";
+    echo "$greeting Everybody!"
+?>
+
+- can't write variables and string simultaneously but you have to conacate them with .
+<?php
+    $greeting = "Hello";
+    echo '$greeting' . ' ' .  'Everybody!'
+?>
 
 ------------------------------------------------------------------------------------------------

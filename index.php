@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1>
-        <?php print "hello world" ?>
+        <?php
+            $greeting = "Hello";
+
+            echo '$greeting' . ' ' .  'Everybody!'
+        ?>
     </h1>
 </body>
 </html>
