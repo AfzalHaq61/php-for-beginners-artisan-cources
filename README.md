@@ -51,9 +51,10 @@ Remember, there's no wrong choice. Just pick the one that feels good to you. And
 
 Our first order of business is to prepare some basic HTML, boot a PHP server, and view it in the browser.
 
-http://localhost:8888
-
 make index file in root folder and run this command your project will run on this port.
+php -S localhost:8000 // command
+
+http://localhost: //port running
 
 you can print a string by these ways in php.
 <?php print "hello world" ?>
@@ -78,5 +79,132 @@ diff between "" (double quotes) and '' (single quotes)
     $greeting = "Hello";
     echo $greeting . ' ' .  'Everybody!'
 ?>
+
+------------------------------------------------------------------------------------------------
+
+# Video 5 (Conditionals and Booleans)
+
+For this next episode, we'll build a quick webpage that displays a dynamic message based upon whether or not you've read a particular book. This will give us the opportunity to review both conditionals and booleans.
+
+------------------------------------------------------------------------------------------------
+
+# Video 6 (Arrays)
+
+# At this point, you know how to create a variable for a primitive string or number. But what about situations when we want to declare a collection, or list of things? A list of usernames, or book titles, or tweets? In these situations, we can reach for arrays.
+
+# In PHP, an array is a data structure that allows you to store multiple values in a single variable. Arrays in PHP can be of different types: numerically indexed, associative, or multidimensional. Here is an explanation and examples of each type:
+
+# 1. Numerically Indexed Array
+# A numerically indexed array uses numeric indices to access its values. The indices start from 0.
+
+<?php
+# Defining a numerically indexed array
+$fruits = array("apple", "orange", "banana", "strawberry");
+
+# Accessing an element of the array
+echo $fruits[1]; // Prints "orange"
+?>
+
+# 2. Multidimensional Array
+# A multidimensional array is an array that contains one or more arrays. It is useful for storing tabular data.
+
+<?php
+# Defining a multidimensional array
+$products = array(
+    "fruits" => array("apple", "orange", "banana"),
+    "vegetables" => array("lettuce", "carrot", "broccoli")
+);
+
+# Accessing an element of the array
+echo $products["fruits"][0]; // Prints "apple"
+?>
+
+# Creating an Array in PHP
+# Arrays in PHP can be defined using the array() function or the [] syntax.
+
+Using array()
+
+<?php
+# Numerically indexed array
+$colors = array("red", "green", "blue");
+
+Using []
+
+<?php
+# Numerically indexed array
+$colors = ["red", "green", "blue"];
+
+# Using foreach
+
+<?php
+$fruits = ["apple", "orange", "banana"];
+
+# Looping through a numerically indexed array
+foreach ($fruits as $fruit) {
+    echo $fruit . "\n";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+    <h1>Recommended Books</h1>
+
+# our array
+    <?php
+        $books = [
+            "Do Androids Dream of Electric Sheep",
+            "The Langoliers",
+            "Hail Mary"
+        ];
+    ?>
+
+# one way which is concatenation
+    <ul>
+        <?php foreach ($books as $book)
+            echo "<li>" . $book . "</li>"
+        ?>
+    </ul>
+
+# second way is just write in Commas
+    <ul>
+        <?php foreach ($books as $book)
+            echo "<li>$book</li>"
+        ?>
+    </ul>
+
+# third way is write in one curly bracket
+    <ul>
+        <?php foreach ($books as $book)
+            echo "<li>{$book}</li>"
+        ?>
+    </ul>
+
+# fourth way: if html element are more then we can use this method html elemnts are without php 
+    <ul>
+        <?php foreach ($books as $book) : ?>
+            <li><?php echo $book ?></li>
+        <?php endforeach ?>
+    </ul>
+
+# we can use shorcut for <?= $book ?> instead of <?php echo $book ?>
+    <ul>
+        <?php foreach ($books as $book) : ?>
+            <li><?= $book ?></li>
+        <?php endforeach ?>
+    </ul>
+
+# we can use bracker insted of : and endforeach
+    <ul>
+        <?php foreach ($books as $book) {?>
+            <li><?= $book ?></li>
+        <?php } ?>
+    </ul>
+
+</body>
+</html>
 
 ------------------------------------------------------------------------------------------------

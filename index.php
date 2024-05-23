@@ -1,17 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Demo</title>
 </head>
 <body>
-    <h1>
-        <?php
-            $greeting = "Hello";
+    <h1>Recommended Books</h1>
 
-            echo $greeting . ' ' .  'Everybody!'
-        ?>
-    </h1>
+    <?php
+        $books = [
+            "Do Androids Dream of Electric Sheep",
+            "The Langoliers",
+            "Hail Mary"
+        ];
+    ?>
+
+    <ul>
+        <?php foreach ($books as $book) {?>
+            <li><?= $book ?></li>
+        <?php } ?>
+    </ul>
+
 </body>
 </html>
